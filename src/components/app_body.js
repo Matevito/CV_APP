@@ -44,11 +44,11 @@ const AppBody = () => {
             return(item)
         })
         set_eduData(new_data)
-        console.log(eduData)
     }
 
     const removing_eduData = (dataKey) => {
-        //todo
+        let new_data = eduData.filter(item => item.key !== dataKey)
+        set_eduData(new_data)
     }
 
     const new_eduData = () => {
