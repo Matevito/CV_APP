@@ -5,12 +5,12 @@ import uniqid from "uniqid";
 
 const AppBody = () => {
     const [personalData, set_personalData] = React.useState({})
+    const [expData, set_expData] = React.useState([])
+    
 
     const handle_PersonalData = (data) => {
         set_personalData(data)
     } 
-    const [expData, set_expData] = React.useState([])
-    
     
     const handle_expData = (data) => {
         console.log(data)
@@ -28,7 +28,13 @@ const AppBody = () => {
         exp_data: [],
     }
     function form_exp_data() {
-        let elements = expData.map(exp_object => <ExperienceData key={exp_object.key} getData={handle_expData}/>)
+        let elements = expData.map(exp_object => {
+            
+            return(
+                <ExperienceData key={exp_object.key} id={exp_object.key} getData={handle_expData}/>
+            )
+            }
+        )
         return elements
     }
     return (

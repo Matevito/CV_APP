@@ -6,8 +6,10 @@ const ExperienceData = (props) => {
     const [fromDate, set_fromDate] = React.useState("")
     const [toDate, set_toDate] = React.useState("")
     const [responsabilities, set_responsabilities] = React.useState("")
-
+    
     const expData = {
+        //todo props.key is undefined
+        key: props.id,
         ocupation : ocupation,
         employer: employer,
         fromDate: fromDate,
