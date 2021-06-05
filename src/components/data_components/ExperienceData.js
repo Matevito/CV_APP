@@ -30,6 +30,9 @@ const ExperienceData = (props) => {
         set_responsabilities(event.target.value)
     }
 
+    const save_data = () => {
+        props.getData(expData)
+    }
     return(
         <div>
             <p></p>
@@ -52,7 +55,7 @@ const ExperienceData = (props) => {
             onChange={handle_respons}></textarea>
             </div>
             <div className="row">
-                    <button className="btn btn-success">Save</button> 
+                    <button className="btn btn-success" onClick={save_data}>Save</button> 
                     <button className="btn btn-warning">Delete</button>
             </div>
         </div>

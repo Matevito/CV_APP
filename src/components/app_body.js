@@ -11,10 +11,10 @@ const AppBody = () => {
     } 
     const [expData, set_expData] = React.useState([])
     
-    /*
+    
     const handle_expData = (data) => {
-        set_expData(data)
-    }*/
+        console.log(data)
+    }
 
     const new_expData = () => {
         //add an object to expdata--with the id
@@ -28,7 +28,7 @@ const AppBody = () => {
         exp_data: [],
     }
     function form_exp_data() {
-        let elements = expData.map(event => <ExperienceData key={uniqid()} />)
+        let elements = expData.map(exp_object => <ExperienceData key={exp_object.key} getData={handle_expData}/>)
         return elements
     }
     return (
