@@ -42,6 +42,7 @@ const PersonalData = (props) => {
     }
     return(
         <div>
+            <h4>Personal info</h4>
             <p></p>
             <div className="input-group flex-nowrap">
                 <input type="text" className="form-control" placeholder="First Name"
@@ -70,7 +71,7 @@ const PersonalData = (props) => {
             </div>
             <div className="mx-auto">
                 <button className="btn btn-success mx-auto"
-                onClick={handle_PersonalData}>Save</button> 
+                onClick={handle_PersonalData}>Save personal info</button> 
             </div>
         </div>
     )
