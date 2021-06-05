@@ -7,7 +7,6 @@ const RenderData = (props) => {
 
     const exp_objects = () => {
         const experience_data = props.userData.exp_data
-        console.log(experience_data)
         let exp_elements = experience_data.map(experience => 
             <div>
                 <hr />
@@ -24,8 +23,10 @@ const RenderData = (props) => {
             <h5>Experience</h5>
             {/*render experience data*/}
             {exp_objects()}
-
+            <hr />
+            <h5>Education</h5>
             {/*render education data*/}
+            <hr/>
         </div>
     )
 }
