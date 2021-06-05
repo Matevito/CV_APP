@@ -1,7 +1,6 @@
 
 const RenderPersonalData = (props) => {
     let p_data = props.data
-    console.log(p_data)
     return(
         <div>
             <div>
