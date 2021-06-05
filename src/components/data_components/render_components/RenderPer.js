@@ -4,16 +4,16 @@ const RenderPersonalData = (props) => {
     return(
         <div>
             <div>
-                name: {p_data.first_name} {p_data.last_name}
+                Name: {p_data.first_name} {p_data.last_name}
             </div>
             <div>
-                role: {p_data.role}
+                Nole: {p_data.role}
             </div>
             <div>
-                email: {p_data.email}
+                Email: {p_data.email}
             </div>
             <div>
-                phone: {p_data.phone}
+                Phone: {p_data.phone}
             </div>
             <div>
                 About me:
