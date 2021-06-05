@@ -3,6 +3,8 @@ const RenderPersonalData = (props) => {
     let p_data = props.data
     return(
         <div>
+            <h4>Personal Data</h4>
+            <hr></hr>
             <div>
                 Name: {p_data.first_name} {p_data.last_name}
             </div>

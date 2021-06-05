@@ -1,5 +1,5 @@
 const RenderExperienceData = (props) => {
-    let exp_data = props.data
+    let data = props.data
     return (
         <div>
             <div>
@@ -9,11 +9,12 @@ const RenderExperienceData = (props) => {
                 {data.employer}
             </div>
             <div>
-                {data.fromDate} - {data.toDate}
+                {data.fromDate} --- {data.toDate}
             </div>
             <div>
                 Responsabilities: {data.responsabilities}
             </div>
+            <p></p>
         </div>
     )
 }
