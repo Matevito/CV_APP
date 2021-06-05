@@ -29,9 +29,27 @@ const ExperienceData = (props) => {
     const handle_respons = (event) => {
         set_responsabilities(event.target.value)
     }
+
     return(
         <div>
-            Experience_data
+            <p></p>
+            <div className="input-group flex-nowrap">
+                <input type="text" className="form-control" placeholder="Ocupation"
+                onChange={handle_ocupation}></input>
+            </div>
+            <div className="input-group flex-nowrap">
+                <input type="text" className="form-control" placeholder="Employer"
+                onChange={handle_employer}></input>
+            </div>
+
+
+            {/*todo: here goes the handle date input logic*/}
+
+            
+            <div className="input-group flex-nonwrap">
+            <textarea className="form-control" aria-label="With textarea" placeholder="Responsabilities"
+            onChange={handle_respons}></textarea>
+            </div>
         </div>
     )
 }
