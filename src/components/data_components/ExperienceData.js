@@ -8,7 +8,6 @@ const ExperienceData = (props) => {
     const [responsabilities, set_responsabilities] = React.useState("")
     
     const expData = {
-        //todo props.key is undefined
         key: props.id,
         ocupation : ocupation,
         employer: employer,
@@ -35,6 +34,9 @@ const ExperienceData = (props) => {
     const save_data = () => {
         props.getData(expData)
     }
+    const delete_data = () => {
+        props.deleteData(expData.key)
+    }
     return(
         <div>
             <p></p>
@@ -56,9 +58,11 @@ const ExperienceData = (props) => {
             <textarea className="form-control" aria-label="With textarea" placeholder="Responsabilities"
             onChange={handle_respons}></textarea>
             </div>
-            <div className="row">
-                    <button className="btn btn-success" onClick={save_data}>Save</button> 
-                    <button className="btn btn-warning">Delete</button>
+            <div className="container-flex">
+                <div className="row">
+                        <button type="button" className="btn btn-success btn-sm" onClick={save_data}>Save</button> 
+                        <button type="button" className="btn btn-danger btn-sm" onClick={delete_data}>Delete</button>
+                </div>
             </div>
         </div>
     )

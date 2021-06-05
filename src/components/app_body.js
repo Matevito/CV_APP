@@ -13,24 +13,21 @@ const AppBody = () => {
     } 
     
     const handle_expData = (data) => {
-        //todo:
         let new_data = expData.map(item => {
             if(item.key === data.key){
-                console.log("i happen")
                 item = data
             }
             return(item)
         })
         set_expData(new_data)
-        console.log(expData)
     }
 
-    const removing_expData = (data) => {
-        //todo:remove an element from the array with key
+    const removing_expData = (dataKey) => {
+        let new_data = expData.filter(item => item.key !== dataKey)
+        set_expData(new_data)
     }
 
     const new_expData = () => {
-        //add an object to expdata--with the id
         let id = uniqid()
         let new_object ={key:id}
         set_expData(expData.concat(new_object))
@@ -44,7 +41,9 @@ const AppBody = () => {
         let elements = expData.map(exp_object => {
             
             return(
-                <ExperienceData key={exp_object.key} id={exp_object.key} getData={handle_expData}/>
+                <ExperienceData key={exp_object.key} id={exp_object.key}
+                getData={handle_expData}
+                deleteData={removing_expData}/>
             )
             }
         )
