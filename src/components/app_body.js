@@ -11,9 +11,10 @@ const AppBody = () => {
     } 
     const [expData, set_expData] = React.useState([])
     
+    /*
     const handle_expData = (data) => {
         set_expData(data)
-    }
+    }*/
 
     const new_expData = () => {
         //add an object to expdata--with the id
@@ -36,7 +37,8 @@ const AppBody = () => {
             <PersonalData getData={handle_PersonalData}/>
             <hr />
             {form_exp_data()}
-            <button className="btn btn-success mx-auto">Add experience info</button>
+            <button className="btn btn-success mx-auto"
+            onClick={new_expData}>Add experience info</button>
             <hr />
             RENDER CV
         </div>
