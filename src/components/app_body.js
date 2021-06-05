@@ -90,6 +90,10 @@ const AppBody = () => {
             <button className="btn btn-success mx-auto"
             onClick={new_expData}>Add experience info</button>
             <hr />
+            {form_edu_data()}
+            <button className="btn btn-success mx-auto"
+            onClick={new_eduData}>Add education info</button>
+            <hr />
             RENDER CV
         </div>
     )
