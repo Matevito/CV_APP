@@ -70,7 +70,7 @@ const PersonalData = (props) => {
             onChange={handle_description}></textarea>
             </div>
             <div className="mx-auto">
-                <button className="btn btn-success mx-auto"
+                <button className="btn btn-success"
                 onClick={handle_PersonalData}>Save personal info</button> 
             </div>
         </div>

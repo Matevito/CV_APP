@@ -36,7 +36,6 @@ const AppBody = () => {
     }
 
     const handle_eduData = (data) => {
-        //todo
         let new_data = eduData.map(item => {
             if(item.key === data.key){
                 item = data
@@ -53,14 +52,15 @@ const AppBody = () => {
 
     const new_eduData = () => {
         let id = uniqid()
+        //edit the new_object
         let new_object = {key:id}
         set_eduData(eduData.concat(new_object))
     }
 
     const userData = {
         p_data: personalData,
-        edu_data: expData,
-        exp_data: eduData,
+        edu_data: eduData,
+        exp_data: expData,
     }
     function form_exp_data() {
         let elements = expData.map(exp_object => {
@@ -87,19 +87,30 @@ const AppBody = () => {
         return elements
     }
     return (
-        <div>
-            <hr />
-            <PersonalData getData={handle_PersonalData}/>
-            <hr />
-            {form_exp_data()}
-            <button className="btn btn-success mx-auto"
-            onClick={new_expData}>Add experience info</button>
-            <hr />
-            {form_edu_data()}
-            <button className="btn btn-success mx-auto"
-            onClick={new_eduData}>Add education info</button>
-            <hr />
-            RENDER CV
+        <div className="container-flex">
+            <div className="row">
+                {/*input data*/}
+                <div className="cl-6">
+                    <hr />
+                    <PersonalData getData={handle_PersonalData}/>
+                    <hr />
+                    {form_exp_data()}
+                    <button className="btn btn-success mx-auto"
+                    onClick={new_expData}>Add experience info</button>
+                    <hr />
+                    {form_edu_data()}
+                    <button className="btn btn-success mx-auto"
+                    onClick={new_eduData}>Add education info</button>
+                    <hr/>
+                </div>
+                {/*render data*/}
+                <div className="cl-6">
+                    <button className="btn btn-primary"
+                    onClick={console.log(userData)}>
+                        show whole_data
+                    </button>
+                </div>
+            </div>
         </div>
     )
 }

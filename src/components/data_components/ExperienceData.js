@@ -64,8 +64,8 @@ const ExperienceData = (props) => {
             {/* closing dates elements*/}         
 
             <div className="input-group flex-nonwrap">
-            <textarea className="form-control" aria-label="With textarea" placeholder="Responsabilities"
-            onChange={handle_respons}></textarea>
+                <textarea className="form-control" aria-label="With textarea" placeholder="Responsabilities"
+                onChange={handle_respons}></textarea>
             </div>
             <div className="container-flex">
                 <div className="row">
