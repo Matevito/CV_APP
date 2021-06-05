@@ -33,6 +33,7 @@ const ExperienceData = (props) => {
     return(
         <div>
             <p></p>
+            <h4>Experience data</h4>
             <div className="input-group flex-nowrap">
                 <input type="text" className="form-control" placeholder="Ocupation"
                 onChange={handle_ocupation}></input>
@@ -53,7 +54,6 @@ const ExperienceData = (props) => {
             <div className="row">
                     <button className="btn btn-success">Save</button> 
                     <button className="btn btn-warning">Delete</button>
-                    
             </div>
         </div>
     )
