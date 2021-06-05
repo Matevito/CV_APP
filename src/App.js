@@ -1,6 +1,7 @@
 import Header from "./components/header"
 import Footer from "./components/footer"
-import App_body from "./components/app_body"
+import AppBody from "./components/app_body"
+import "./App.css"
 
 function App() {
   return (
@@ -8,11 +9,9 @@ function App() {
       <div className="row">
         <Header />
       </div>
-      <hr />
       <div className="row">
-        <App_body />
+        <AppBody />
       </div>
-      <hr />
       <div className="row">
         <Footer />
       </div>
