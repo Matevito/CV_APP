@@ -2,6 +2,7 @@ import React from "react"
 import PersonalData from "./data_components/PersonalData"
 import ExperienceData from "./data_components/ExperienceData"
 import EducationData from "./data_components/EducationData"
+import RenderData from "./data_components/RenderData"
 import uniqid from "uniqid";
 
 const AppBody = () => {
@@ -105,10 +106,7 @@ const AppBody = () => {
                 </div>
                 {/*render data*/}
                 <div className="cl-6">
-                    <button className="btn btn-primary"
-                    onClick={console.log(userData)}>
-                        show whole_data
-                    </button>
+                    <RenderData userData={userData} />
                 </div>
             </div>
         </div>
