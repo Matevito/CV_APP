@@ -37,7 +37,14 @@ const AppBody = () => {
 
     const handle_eduData = (data) => {
         //todo
-        
+        let new_data = eduData.map(item => {
+            if(item.key === data.key){
+                item = data
+            }
+            return(item)
+        })
+        set_eduData(new_data)
+        console.log(eduData)
     }
 
     const removing_eduData = (dataKey) => {
@@ -45,7 +52,6 @@ const AppBody = () => {
     }
 
     const new_eduData = () => {
-        //TEST
         let id = uniqid()
         let new_object = {key:id}
         set_eduData(eduData.concat(new_object))
@@ -70,7 +76,6 @@ const AppBody = () => {
     }
 
     const form_edu_data = () => {
-        //Test
         let elements = eduData.map(edu_object => {
             return(
                 <EducationData key={edu_object.key} id={edu_object.key}
