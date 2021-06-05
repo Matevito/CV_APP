@@ -29,6 +29,7 @@ const AppBody = () => {
 
     const new_expData = () => {
         let id = uniqid()
+        //edit the new_object 
         let new_object ={key:id}
         set_expData(expData.concat(new_object))
     }

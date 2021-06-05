@@ -49,11 +49,20 @@ const ExperienceData = (props) => {
                 <input type="text" className="form-control" placeholder="Employer"
                 onChange={handle_employer}></input>
             </div>
+            {/* dates elements*/}
 
+            <div className="input-group flex-nonwrap">
+                <span className="input-group-text">From: </span>
+                <input type="date" className="form-control" onChange={handle_fromDate}></input>
+            </div>   
 
-            {/*todo: here goes the handle date input logic*/}
+            <div className="input-group flex-nonwrap">
+                <span className="input-group-text">To: </span>
+                <input type="date" className="form-control" onChange={handle_toDate}></input>
+            </div> 
 
-            
+            {/* closing dates elements*/}         
+
             <div className="input-group flex-nonwrap">
             <textarea className="form-control" aria-label="With textarea" placeholder="Responsabilities"
             onChange={handle_respons}></textarea>
