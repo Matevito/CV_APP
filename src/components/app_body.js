@@ -3,12 +3,15 @@ import PersonalData from "./data_components/PersonalData"
 
 const AppBody = () => {
     const [personalData, set_personalData] = React.useState({})
+
     const handle_PersonalData = (data) => {
         set_personalData(data)
     } 
+    const [expData, set_expData] = React.useState([])
+
     const userData = {
         p_data: personalData,
-        e_data: [],
+        edu_data: expData,
         exp_data: [],
     }
     return (
