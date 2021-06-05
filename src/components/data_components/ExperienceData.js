@@ -50,6 +50,11 @@ const ExperienceData = (props) => {
             <textarea className="form-control" aria-label="With textarea" placeholder="Responsabilities"
             onChange={handle_respons}></textarea>
             </div>
+            <div className="row">
+                    <button className="btn btn-success">Save</button> 
+                    <button className="btn btn-warning">Delete</button>
+                    
+            </div>
         </div>
     )
 }
