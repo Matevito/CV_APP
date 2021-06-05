@@ -13,7 +13,20 @@ const AppBody = () => {
     } 
     
     const handle_expData = (data) => {
-        console.log(data)
+        //todo:
+        let new_data = expData.map(item => {
+            if(item.key === data.key){
+                console.log("i happen")
+                item = data
+            }
+            return(item)
+        })
+        set_expData(new_data)
+        console.log(expData)
+    }
+
+    const removing_expData = (data) => {
+        //todo:remove an element from the array with key
     }
 
     const new_expData = () => {
