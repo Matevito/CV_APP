@@ -3,10 +3,10 @@ const RenderExperienceData = (props) => {
     return (
         <div>
             <div>
-                {data.ocupation}
+                Ocupation: {data.ocupation}
             </div>
             <div>
-                {data.employer}
+                Employer: {data.employer}
             </div>
             <div>
                 {data.fromDate} --- {data.toDate}
