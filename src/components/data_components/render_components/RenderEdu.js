@@ -2,7 +2,15 @@ const RenderEducationData = (props) => {
     let data = props.data
     return (
         <div>
-            Testing education rendering
+            <div>
+                Title: {data.title}
+            </div>
+            <div>
+                Organization: {data.organization}
+            </div>
+            <div>
+                {data.fromDate} --- {data.toDate}
+            </div>
         </div>
     )
 }
